@@ -82,7 +82,7 @@ def hangmanGame():
     secretWord = random.choice(words)
     gameIsOver = False
 
-    while True:
+    while not gameIsOver:
         displayBoard(hangmanPics, missedLetters, correctLetters, secretWord)
         guess = getGuess(missedLetters + correctLetters)
         if guess in secretWord:
